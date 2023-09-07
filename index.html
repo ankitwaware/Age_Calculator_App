@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script defer src="./index.js"></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-container">
+        <div class="input-day">
+          <label for="day" class="label">day</label>
+          <input
+            class="input"
+            id="day"
+            type="number"
+            min="1"
+            max="31"
+            placeholder="DD"
+            autocomplete="off"
+          />
+          <p class="requiredErrorMessage Eday"></p>
+        </div>
+
+        <div class="input-month">
+          <label for="month" class="label">month</label>
+          <input
+            class="input"
+            id="month"
+            type="number"
+            min="1"
+            max="12"
+            placeholder="MM"
+            autocomplete="off"
+          />
+          <p class="requiredErrorMessage Emonth"></p>
+        </div>
+
+        <div class="input-year">
+          <label for="year" class="label">year</label>
+          <input
+            class="input"
+            id="year"
+            type="number"
+            placeholder="YYYY"
+            autocomplete="off"
+          />
+          <p class="requiredErrorMessage Eyear"></p>
+        </div>
+      </div>
+
+      <div class="hr-line">
+        <button type="submit" class="arrow-button" onclick="age()">
+          <img
+            class="icon-arrow"
+            src="./assets/images/icon-arrow.svg"
+            alt="icon-arrow"
+          />
+        </button>
+      </div>
+
+      <div class="output-container">
+        <h1 class="output-text"><span id="outputYear">--</span>years</h1>
+        <h1 class="output-text"><span id="outputMonth">--</span>months</h1>
+        <h1 class="output-text"><span id="outputDay">--</span>days</h1>
+      </div>
+    </div>
+  </body>
+</html>
